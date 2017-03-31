@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="SiSKeyWords" representedClassName="SiSKeyWords" syncable="YES">
+        <attribute name="keyWord" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="keyWordID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="student" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SiSStudent" inverseName="studentKeyWord" inverseEntity="SiSStudent" syncable="YES"/>
+    </entity>
+    <entity name="SiSStudent" representedClassName="SiSStudent" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="studentKeyWord" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SiSKeyWords" inverseName="student" inverseEntity="SiSKeyWords" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SiSKeyWords" positionX="-2072" positionY="56" width="128" height="88"/>
+        <element name="SiSStudent" positionX="-2304" positionY="36" width="128" height="103"/>
+    </elements>
+</model>
